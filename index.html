@@ -141,7 +141,7 @@
         function init(vector, v) {
           var i = 0;
           var part = '';
-          var partials = ["sl", "m", "o", "s", "ed", "ee", "a", "id", "lc", "li", "lav", "lac", "fd", "rd", "nc", "pv"];
+          var partials = [ "lc", "li", "lav", "lac", "fd", "rd", "nc", "pv","sl", "m", "o", "s", "ed", "ee", "a", "id"];
           for (var i = 0; i < partials.length; i++) {
             $("#" + partials[i]).val(0);
           }
@@ -239,9 +239,9 @@
           scorev = scorev + $("#id").val();
           
           $('#score').text(score);
-          $("#score").attr("href", "https://red-gosf.github.io/OWASP-CalculatorV2/?vector=" + score);
+          $("#score").attr("href", "index.html?vector=" + score);
           $('#scorev').text(scorev);
-          $("#scorev").attr("href", "https://red-gosf.github.io/OWASP-CalculatorV2/?v=" + scorev);
+          $("#scorev").attr("href", "index.html?v=" + scorev);
           matrix[0][0] = 'Info';
           matrix[1][0] = 'Low';
           matrix[2][0] = 'Medium';
