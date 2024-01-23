@@ -299,135 +299,6 @@ BI/PV: 0-3-5-7-9
       <h1>OWASP RISK RATING CALCULATORv2@GOSOFT</h1>
       <div class="row">
         <div class="col-md-6">
-          <h2>Likelihood Factors</h2>
-          <div class="row">
-            <div class="col-md-6">
-              <h5>Threat Agent Factors</h5>
-              <!--Threat Agent/Skill level: How technically skilled is this group of threat agents? Security penetration skills (1), network and programming skills (3), advanced computer user (5), some technical skills (6), no technical skills (9)-->
-              <h6>Skill Level</h6>
-              <select class="custom-select custom-select-sm" id="sl" data-toggle="tooltip" data-placement="top" title="ทักษะทางด้านเทคนิคของกลุ่มผู้ไม่ประสงค์ดี">
-                <option class="text-0" value="0">0 - N/A</option>
-                <option class="text-1" value="1">1 - มีทักษะด้านการเจาะระบบความปลอดภัย</option>
-                <option class="text-2" value="2">2</option>
-                <option class="text-3" value="3">3 - มีทักษะด้านเครือข่ายและโปรแกรมมิ่ง</option>
-                <option class="text-4" value="4">4</option>
-                <option class="text-5" value="5">5 - มีทักษะด้านคอมพิวเตอร์ขั้นสูง</option>
-                <option class="text-6" value="6">6 - มีทักษะด้านเทคนิคบ้าง</option>
-                <option class="text-7" value="7">7</option>
-                <option class="text-8" value="8">8</option>
-                <option class="text-9" value="9">9 - ไม่มีทักษะด้านเทคนิค</option>
-              </select>
-              <!--Threat Agent/Motive: How motivated is this group of threat agents to find and exploit this vulnerability? Low or no reward (1), possible reward (4), high reward (9)-->
-              <h6>Motive</h6>
-              <select class="custom-select custom-select-sm" id="m" data-toggle="tooltip" data-placement="top" title="แรงจูงใจเพื่อค้นหาและใช้ประโยชน์จากช่องโหว่ของกลุ่มผู้ไม่ประสงค์ดี">
-                <option class="text-0" value="0">0 - N/A</option>
-                <option class="text-1" value="1">1 - ต่ำหรือไม่ได้สิ่งที่มีมูลค่า</option>
-                <option class="text-2" value="2">2</option>
-                <option class="text-3" value="3">3</option>
-                <option class="text-4" value="4">4 - มีโอกาสที่จะได้สิ่งที่มีมูลค่า</option>
-                <option class="text-5" value="5">5</option>
-                <option class="text-6" value="6">6</option>
-                <option class="text-7" value="7">7</option>
-                <option class="text-8" value="8">8</option>
-                <option class="text-9" value="9">9 - ได้สิ่งที่มีมูลค่าสูง</option>
-              </select>
-              <!--Threat Agent/Opportunity: What resources and opportunities are required for this group of threat agents to find and exploit this vulnerability? Full access or expensive resources required (0), special access or resources required (4), some access or resources required (7), no access or resources required (9)-->
-              <h6>Opportunity</h6>
-              <select class="custom-select custom-select-sm" id="o" data-toggle="tooltip" data-placement="top" title="ทรัพยากรและโอกาสที่จำเป็นเพื่อค้นหาและใช้ประโยชน์จากช่องโหว่ของกลุ่มผู้ไม่ประสงค์ดี">
-                <option class="text-0" value="0">0 - ต้องการเข้าถึงเต็มรูปแบบหรือใช้ทรัพยากรที่มูลค่าสูง</option>
-                <option class="text-1" value="1">1</option>
-                <option class="text-2" value="2">2</option>
-                <option class="text-3" value="3">3</option>
-                <option class="text-4" value="4">4 - ต้องการเข้าถึงหรือใช้ทรัพยากรลักษณะจำเพาะพิเศษ</option>
-                <option class="text-5" value="5">5</option>
-                <option class="text-6" value="6">6</option>
-                <option class="text-7" value="7">7 - ต้องการเข้าถึงหรือใช้ทรัพยากรบางอย่าง</option>
-                <option class="text-8" value="8">8</option>
-                <option class="text-9" value="9">9 - ไม่ต้องการการเข้าถึงหรือใช้ทรัพยากร</option>
-              </select>
-              <!--Threat Agent/Size: How large is this group of threat agents? Developers (2), system administrators (2), intranet users (4), partners (5), authenticated users (6), anonymous Internet users (9)-->
-              <h6>Size</h6>
-              <select class="custom-select custom-select-sm" id="s" data-toggle="tooltip" data-placement="top" title="ขนาดของกลุ่มผู้ไม่ประสงค์ดี">
-                <option class="text-0" value="0">0 - N/A</option>
-                <option class="text-1" value="1">1</option>
-                <option class="text-2" value="2">2 - กลุ่มผู้ดูแลระบบหรือกลุ่มผู้พัฒนาซอฟต์แวร์</option>
-                <option class="text-3" value="3">3</option>
-                <option class="text-4" value="4">4 - กลุ่มผู้ใช้งานระบบจากเครือข่ายภายใน</option>
-                <option class="text-5" value="5">5 - กลุ่มผู้มีส่วนร่วมหรือหุ้นส่วน</option>
-                <option class="text-6" value="6">6 - กลุ่มผู้ได้รับสิทธิ์ในการเข้าใช้งานระบบ</option>
-                <option class="text-7" value="7">7</option>
-                <option class="text-8" value="8">8</option>
-                <option class="text-9" value="9">9 - กลุ่มผู้ใช้งานอินเทอร์เน็ตทั่วไป</option>
-              </select>
-              <div class="alert m-3" role="alert"> Threat Agent Factor: <span id="TAF"></span>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <h5>Vulnerability Factors</h5>
-              <!--Vulnerability/Ease of discovery: How easy is it for this group of threat agents to discover this vulnerability? Practically impossible (1), difficult (3), easy (7), automated tools available (9)-->
-              <h6>Ease of Discovery</h6>
-              <select class="custom-select custom-select-sm" id="ed" data-toggle="tooltip" data-placement="top" title="ความยากง่ายที่จะค้นพบช่องโหว่จากกลุ่มผู้ไม่ประสงค์ดี">
-                <option class="text-0" value="0">0 - N/A</option>
-                <option class="text-1" value="1">1 - เป็นไปไม่ได้ในเชิงปฏิบัติ</option>
-                <option class="text-2" value="2">2</option>
-                <option class="text-3" value="3">3 - มีความยากในการค้นพบ</option>
-                <option class="text-4" value="4">4</option>
-                <option class="text-5" value="5">5</option>
-                <option class="text-6" value="6">6</option>
-                <option class="text-7" value="7">7 - มีความง่ายในการค้นพบ</option>
-                <option class="text-8" value="8">8</option>
-                <option class="text-9" value="9">9 - มีเครื่องมืออัตโนมัติในการค้นพบ</option>
-              </select>
-              <!--Vulnerability/Ease of exploit: How easy is it for this group of threat agents to actually exploit this vulnerability? Theoretical (1), difficult (3), easy (5), automated tools available (9)-->
-              <h6>Ease of Exploit</h6>
-              <select class="custom-select custom-select-sm" id="ee" data-toggle="tooltip" data-placement="top" title="ความยากง่ายที่จะใช้ประโยชน์ของช่องโหว่จากกลุ่มผู้ไม่ประสงค์ดี">
-                <option class="text-0" value="0">0 - N/A</option>
-                <option class="text-1" value="1">1 - เป็นไปได้ในเชิงทฤษฎี</option>
-                <option class="text-2" value="2">2</option>
-                <option class="text-3" value="3">3 - มีความยากในการใช้ประโยชน์</option>
-                <option class="text-4" value="4">4</option>
-                <option class="text-5" value="5">5 - มีความง่ายในการใช้ประโยชน์</option>
-                <option class="text-6" value="6">6</option>
-                <option class="text-7" value="7">7</option>
-                <option class="text-8" value="8">8</option>
-                <option class="text-9" value="9">9 - มีเครื่องมืออัตโนมัติในการใช้ประโยชน์</option>
-              </select>
-              <!--Vulnerability/Awareness: How well known is this vulnerability to this group of threat agents? Unknown (1), hidden (4), obvious (6), public knowledge (9)-->
-              <h6>Awareness</h6>
-              <select class="custom-select custom-select-sm" id="a" data-toggle="tooltip" data-placement="top" title="ช่องโหว่เป็นที่รู้จักของกลุ่มผู้ไม่ประสงค์ดี">
-                <option class="text-0" value="0">0 - N/A</option>
-                <option class="text-1" value="1">1 - ไม่เป็นที่รู้จัก</option>
-                <option class="text-2" value="2">2</option>
-                <option class="text-3" value="3">3</option>
-                <option class="text-4" value="4">4 - รู้จักในวงแคบ</option>
-                <option class="text-5" value="5">5</option>
-                <option class="text-6" value="6">6 - ชัดเจน</option>
-                <option class="text-7" value="7">7</option>
-                <option class="text-8" value="8">8</option>
-                <option class="text-9" value="9">9 - เป็นที่รู้จัก</option>
-              </select>
-              <!--Vulnerability/Intrusion detection: How likely is an exploit to be detected? Active detection in application (1), logged and reviewed (3), logged without review (8), not logged (9)-->
-              <h6>Intrusion Detection</h6>
-              <select class="custom-select custom-select-sm" id="id" data-toggle="tooltip" data-placement="top" title="แนวโน้มที่จะถูกตรวจจับจากการนำช่องโหว่ไปใช้ประโยชน์">
-                <option class="text-0" value="0">0 - N/A</option>
-                <option class="text-1" value="1">1 - มีการตรวจจับในแอปพลิเคชัน</option>
-                <option class="text-2" value="2">2</option>
-                <option class="text-3" value="3">3 - มีการบันทึกและตรวจทานการกระทำ</option>
-                <option class="text-4" value="4">4</option>
-                <option class="text-5" value="5">5</option>
-                <option class="text-6" value="6">6</option>
-                <option class="text-7" value="7">7</option>
-                <option class="text-8" value="8">8 - มีการบันทึกแต่ไม่มีการตรวจทานการกระทำ</option>
-                <option class="text-9" value="9">9 - ไม่มีการบันทึกการกระทำ</option>
-              </select>
-              <div class="alert m-3" role="alert"> Vulnerability Factor: <span id="VF"></span>
-              </div>
-            </div>
-          </div>
-          <div class="alert m-3" role="alert"> Likelihoood Factor: <span id="LF"></span>
-          </div>
-        </div>
-        <div class="col-md-6">
           <h2>Impact Factors</h2>
           <div class="row">
             <div class="col-md-6">
@@ -554,6 +425,135 @@ BI/PV: 0-3-5-7-9
             </div>
           </div>
           <div class="alert m-3" role="alert"> Impact Factor: <span id="IF"></span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2>Likelihood Factors</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <h5>Threat Agent Factors</h5>
+              <!--Threat Agent/Skill level: How technically skilled is this group of threat agents? Security penetration skills (1), network and programming skills (3), advanced computer user (5), some technical skills (6), no technical skills (9)-->
+              <h6>Skill Level</h6>
+              <select class="custom-select custom-select-sm" id="sl" data-toggle="tooltip" data-placement="top" title="ทักษะทางด้านเทคนิคของกลุ่มผู้ไม่ประสงค์ดี">
+                <option class="text-0" value="0">0 - N/A</option>
+                <option class="text-1" value="1">1 - มีทักษะด้านการเจาะระบบความปลอดภัย</option>
+                <option class="text-2" value="2">2</option>
+                <option class="text-3" value="3">3 - มีทักษะด้านเครือข่ายและโปรแกรมมิ่ง</option>
+                <option class="text-4" value="4">4</option>
+                <option class="text-5" value="5">5 - มีทักษะด้านคอมพิวเตอร์ขั้นสูง</option>
+                <option class="text-6" value="6">6 - มีทักษะด้านเทคนิคบ้าง</option>
+                <option class="text-7" value="7">7</option>
+                <option class="text-8" value="8">8</option>
+                <option class="text-9" value="9">9 - ไม่มีทักษะด้านเทคนิค</option>
+              </select>
+              <!--Threat Agent/Motive: How motivated is this group of threat agents to find and exploit this vulnerability? Low or no reward (1), possible reward (4), high reward (9)-->
+              <h6>Motive</h6>
+              <select class="custom-select custom-select-sm" id="m" data-toggle="tooltip" data-placement="top" title="แรงจูงใจเพื่อค้นหาและใช้ประโยชน์จากช่องโหว่ของกลุ่มผู้ไม่ประสงค์ดี">
+                <option class="text-0" value="0">0 - N/A</option>
+                <option class="text-1" value="1">1 - ต่ำหรือไม่ได้สิ่งที่มีมูลค่า</option>
+                <option class="text-2" value="2">2</option>
+                <option class="text-3" value="3">3</option>
+                <option class="text-4" value="4">4 - มีโอกาสที่จะได้สิ่งที่มีมูลค่า</option>
+                <option class="text-5" value="5">5</option>
+                <option class="text-6" value="6">6</option>
+                <option class="text-7" value="7">7</option>
+                <option class="text-8" value="8">8</option>
+                <option class="text-9" value="9">9 - ได้สิ่งที่มีมูลค่าสูง</option>
+              </select>
+              <!--Threat Agent/Opportunity: What resources and opportunities are required for this group of threat agents to find and exploit this vulnerability? Full access or expensive resources required (0), special access or resources required (4), some access or resources required (7), no access or resources required (9)-->
+              <h6>Opportunity</h6>
+              <select class="custom-select custom-select-sm" id="o" data-toggle="tooltip" data-placement="top" title="ทรัพยากรและโอกาสที่จำเป็นเพื่อค้นหาและใช้ประโยชน์จากช่องโหว่ของกลุ่มผู้ไม่ประสงค์ดี">
+                <option class="text-0" value="0">0 - ต้องการเข้าถึงเต็มรูปแบบหรือใช้ทรัพยากรที่มูลค่าสูง</option>
+                <option class="text-1" value="1">1</option>
+                <option class="text-2" value="2">2</option>
+                <option class="text-3" value="3">3</option>
+                <option class="text-4" value="4">4 - ต้องการเข้าถึงหรือใช้ทรัพยากรลักษณะจำเพาะพิเศษ</option>
+                <option class="text-5" value="5">5</option>
+                <option class="text-6" value="6">6</option>
+                <option class="text-7" value="7">7 - ต้องการเข้าถึงหรือใช้ทรัพยากรบางอย่าง</option>
+                <option class="text-8" value="8">8</option>
+                <option class="text-9" value="9">9 - ไม่ต้องการการเข้าถึงหรือใช้ทรัพยากร</option>
+              </select>
+              <!--Threat Agent/Size: How large is this group of threat agents? Developers (2), system administrators (2), intranet users (4), partners (5), authenticated users (6), anonymous Internet users (9)-->
+              <h6>Size</h6>
+              <select class="custom-select custom-select-sm" id="s" data-toggle="tooltip" data-placement="top" title="ขนาดของกลุ่มผู้ไม่ประสงค์ดี">
+                <option class="text-0" value="0">0 - N/A</option>
+                <option class="text-1" value="1">1</option>
+                <option class="text-2" value="2">2 - กลุ่มผู้ดูแลระบบหรือกลุ่มผู้พัฒนาซอฟต์แวร์</option>
+                <option class="text-3" value="3">3</option>
+                <option class="text-4" value="4">4 - กลุ่มผู้ใช้งานระบบจากเครือข่ายภายใน</option>
+                <option class="text-5" value="5">5 - กลุ่มผู้มีส่วนร่วมหรือหุ้นส่วน</option>
+                <option class="text-6" value="6">6 - กลุ่มผู้ได้รับสิทธิ์ในการเข้าใช้งานระบบ</option>
+                <option class="text-7" value="7">7</option>
+                <option class="text-8" value="8">8</option>
+                <option class="text-9" value="9">9 - กลุ่มผู้ใช้งานอินเทอร์เน็ตทั่วไป</option>
+              </select>
+              <div class="alert m-3" role="alert"> Threat Agent Factor: <span id="TAF"></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5>Vulnerability Factors</h5>
+              <!--Vulnerability/Ease of discovery: How easy is it for this group of threat agents to discover this vulnerability? Practically impossible (1), difficult (3), easy (7), automated tools available (9)-->
+              <h6>Ease of Discovery</h6>
+              <select class="custom-select custom-select-sm" id="ed" data-toggle="tooltip" data-placement="top" title="ความยากง่ายที่จะค้นพบช่องโหว่จากกลุ่มผู้ไม่ประสงค์ดี">
+                <option class="text-0" value="0">0 - N/A</option>
+                <option class="text-1" value="1">1 - เป็นไปไม่ได้ในเชิงปฏิบัติ</option>
+                <option class="text-2" value="2">2</option>
+                <option class="text-3" value="3">3 - มีความยากในการค้นพบ</option>
+                <option class="text-4" value="4">4</option>
+                <option class="text-5" value="5">5</option>
+                <option class="text-6" value="6">6</option>
+                <option class="text-7" value="7">7 - มีความง่ายในการค้นพบ</option>
+                <option class="text-8" value="8">8</option>
+                <option class="text-9" value="9">9 - มีเครื่องมืออัตโนมัติในการค้นพบ</option>
+              </select>
+              <!--Vulnerability/Ease of exploit: How easy is it for this group of threat agents to actually exploit this vulnerability? Theoretical (1), difficult (3), easy (5), automated tools available (9)-->
+              <h6>Ease of Exploit</h6>
+              <select class="custom-select custom-select-sm" id="ee" data-toggle="tooltip" data-placement="top" title="ความยากง่ายที่จะใช้ประโยชน์ของช่องโหว่จากกลุ่มผู้ไม่ประสงค์ดี">
+                <option class="text-0" value="0">0 - N/A</option>
+                <option class="text-1" value="1">1 - เป็นไปได้ในเชิงทฤษฎี</option>
+                <option class="text-2" value="2">2</option>
+                <option class="text-3" value="3">3 - มีความยากในการใช้ประโยชน์</option>
+                <option class="text-4" value="4">4</option>
+                <option class="text-5" value="5">5 - มีความง่ายในการใช้ประโยชน์</option>
+                <option class="text-6" value="6">6</option>
+                <option class="text-7" value="7">7</option>
+                <option class="text-8" value="8">8</option>
+                <option class="text-9" value="9">9 - มีเครื่องมืออัตโนมัติในการใช้ประโยชน์</option>
+              </select>
+              <!--Vulnerability/Awareness: How well known is this vulnerability to this group of threat agents? Unknown (1), hidden (4), obvious (6), public knowledge (9)-->
+              <h6>Awareness</h6>
+              <select class="custom-select custom-select-sm" id="a" data-toggle="tooltip" data-placement="top" title="ช่องโหว่เป็นที่รู้จักของกลุ่มผู้ไม่ประสงค์ดี">
+                <option class="text-0" value="0">0 - N/A</option>
+                <option class="text-1" value="1">1 - ไม่เป็นที่รู้จัก</option>
+                <option class="text-2" value="2">2</option>
+                <option class="text-3" value="3">3</option>
+                <option class="text-4" value="4">4 - รู้จักในวงแคบ</option>
+                <option class="text-5" value="5">5</option>
+                <option class="text-6" value="6">6 - ชัดเจน</option>
+                <option class="text-7" value="7">7</option>
+                <option class="text-8" value="8">8</option>
+                <option class="text-9" value="9">9 - เป็นที่รู้จัก</option>
+              </select>
+              <!--Vulnerability/Intrusion detection: How likely is an exploit to be detected? Active detection in application (1), logged and reviewed (3), logged without review (8), not logged (9)-->
+              <h6>Intrusion Detection</h6>
+              <select class="custom-select custom-select-sm" id="id" data-toggle="tooltip" data-placement="top" title="แนวโน้มที่จะถูกตรวจจับจากการนำช่องโหว่ไปใช้ประโยชน์">
+                <option class="text-0" value="0">0 - N/A</option>
+                <option class="text-1" value="1">1 - มีการตรวจจับในแอปพลิเคชัน</option>
+                <option class="text-2" value="2">2</option>
+                <option class="text-3" value="3">3 - มีการบันทึกและตรวจทานการกระทำ</option>
+                <option class="text-4" value="4">4</option>
+                <option class="text-5" value="5">5</option>
+                <option class="text-6" value="6">6</option>
+                <option class="text-7" value="7">7</option>
+                <option class="text-8" value="8">8 - มีการบันทึกแต่ไม่มีการตรวจทานการกระทำ</option>
+                <option class="text-9" value="9">9 - ไม่มีการบันทึกการกระทำ</option>
+              </select>
+              <div class="alert m-3" role="alert"> Vulnerability Factor: <span id="VF"></span>
+              </div>
+            </div>
+          </div>
+          <div class="alert m-3" role="alert"> Likelihoood Factor: <span id="LF"></span>
           </div>
         </div>
       </div>
