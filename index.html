@@ -199,16 +199,9 @@
           TAF = (+$("#sl").val() + +$("#m").val() + +$("#o").val() + +$("#s").val()) / 4;
           VF = (+$("#ed").val() + +$("#ee").val() + +$("#a").val() + +$("#id").val()) / 4;
           TIF = (+$("#lc").val() + +$("#li").val() + +$("#lav").val() + +$("#lac").val()) / 4;
-          BIF = (+$("#fd").val() + +$("#rd").val() + +$("#nc").val() + +$("#pv").val()) / 4;
+          BIF = (+$("#fd").val() + +$("#rd").val() + +$("#nc").val() + +$("#pv").val()) / 4
+
           score = '(';
-          score = score + 'SL:' + $("#sl").val() + '/';
-          score = score + 'M:' + $("#m").val() + '/';
-          score = score + 'O:' + $("#o").val() + '/';
-          score = score + 'S:' + $("#s").val() + '/';
-          score = score + 'ED:' + $("#ed").val() + '/';
-          score = score + 'EE:' + $("#ee").val() + '/';
-          score = score + 'A:' + $("#a").val() + '/';
-          score = score + 'ID:' + $("#id").val() + '/';
           score = score + 'LC:' + $("#lc").val() + '/';
           score = score + 'LI:' + $("#li").val() + '/';
           score = score + 'LAV:' + $("#lav").val() + '/';
@@ -216,17 +209,17 @@
           score = score + 'FD:' + $("#fd").val() + '/';
           score = score + 'RD:' + $("#rd").val() + '/';
           score = score + 'NC:' + $("#nc").val() + '/';
-          score = score + 'PV:' + $("#pv").val();
+          score = score + 'PV:' + $("#pv").val() + '/';
+          score = score + 'SL:' + $("#sl").val() + '/';
+          score = score + 'M:' + $("#m").val() + '/';
+          score = score + 'O:' + $("#o").val() + '/';
+          score = score + 'S:' + $("#s").val() + '/';
+          score = score + 'ED:' + $("#ed").val() + '/';
+          score = score + 'EE:' + $("#ee").val() + '/';
+          score = score + 'A:' + $("#a").val();
           score = score + ')';
+
           scorev = '';
-          scorev = scorev + $("#sl").val();
-          scorev = scorev + $("#m").val();
-          scorev = scorev + $("#o").val();
-          scorev = scorev + $("#s").val();
-          scorev = scorev + $("#ed").val();
-          scorev = scorev + $("#ee").val();
-          scorev = scorev + $("#a").val();
-          scorev = scorev + $("#id").val();
           scorev = scorev + $("#lc").val();
           scorev = scorev + $("#li").val();
           scorev = scorev + $("#lav").val();
@@ -235,6 +228,15 @@
           scorev = scorev + $("#rd").val();
           scorev = scorev + $("#nc").val();
           scorev = scorev + $("#pv").val();
+          scorev = scorev + $("#sl").val();
+          scorev = scorev + $("#m").val();
+          scorev = scorev + $("#o").val();
+          scorev = scorev + $("#s").val();
+          scorev = scorev + $("#ed").val();
+          scorev = scorev + $("#ee").val();
+          scorev = scorev + $("#a").val();
+          scorev = scorev + $("#id").val();
+          
           $('#score').text(score);
           $("#score").attr("href", "https://red-gosf.github.io/OWASP-CalculatorV2/?vector=" + score);
           $('#scorev').text(scorev);
