@@ -252,11 +252,14 @@
           matrix[1][2] = 'High';
           matrix[2][2] = 'Critical';
           LF = (TAF + VF) / 2;
+          IF = (TIF + BIF) /2;
+          /*
           if (BIF != 0) {
             IF = BIF;
           } else {
             IF = TIF;
           }
+          */
           setFactor(TAF, 'TAF');
           setFactor(VF, 'VF');
           setFactor(TIF, 'TIF');
